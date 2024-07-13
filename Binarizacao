@@ -1,0 +1,15 @@
+DIG = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+IND = 0
+
+NUM = int(input('indique a numero entre 0 e 4294967296'))
+
+while NUM >= 2:
+    RESTO = NUM % 2
+    DIG[IND] = RESTO 
+    NUM = (NUM - RESTO)/2
+    IND = IND + 1   
+    
+DIG[IND] = 1
+for i in range(IND, -1, -1):
+    print(int(DIG[i]), end='')
+    
